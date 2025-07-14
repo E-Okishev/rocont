@@ -1,14 +1,19 @@
 @import "../variables.scss";
 
-body, html {
+body,
+html {
   overflow-x: visible;
-} 
+}
 
 .page {
   max-width: calc(1160px + $small * 2);
   margin: 0 auto;
   background-color: $bg-color;
   padding-inline: $small;
+  background-image: url(../../image/bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .main {

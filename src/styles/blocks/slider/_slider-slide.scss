@@ -1,6 +1,12 @@
 @import "../../variables.scss";
 
 .swiper-slide {
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+
   .slide-overlay {
     position: absolute;
     bottom: 0;
