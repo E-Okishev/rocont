@@ -1,0 +1,33 @@
+.header {
+  @media (width <= $isTablet) {
+    &__burger {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding: 12px 9px;
+      cursor: pointer;
+      z-index: 110;
+    }
+
+    &__burger-item {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: $small;
+      background-color: $font-color-accent;
+      transition: 0.3s;
+    }
+
+    &__burger.active &__burger-item:nth-child(2) {
+      opacity: 0;
+    }
+
+    &__burger.active &__burger-item:nth-child(1) {
+      transform: translateY(5px) rotate(45deg);
+    }
+
+    &__burger.active &__burger-item:nth-child(3) {
+      transform: translateY(-5px) rotate(-45deg);
+    }
+  }
+}

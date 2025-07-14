@@ -1,0 +1,27 @@
+$gropled: Gropled;
+$tilda: tilda;
+
+$font-color: #2e2d2b;
+$font-color-accent: #ffffff;
+
+$bg-color: #f6f6f6;
+$bg-white: $font-color-accent;
+
+$accent-color: #1f8b48;
+$gradient: linear-gradient(
+  180deg,
+  rgba(31, 139, 72, 0) 31.3%,
+  $accent-color 100%
+);
+
+$small: 8px;
+$medium: 16px;
+$large: 24px;
+$very-large: 32px;
+$imposible: 64px;
+
+$isMobile: 350px;
+$isMobileHorizont: 640px;
+$isTablet: 800px;
+$isTabletHorizont: 960px;
+$isDesctop: 1200px;

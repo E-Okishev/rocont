@@ -1,0 +1,7 @@
+<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25">
+  <rect x="24" y=".5" width="24" height="24" rx="12" transform="rotate(90 24 .5)" fill="#fff" />
+  <path d="M12 .5c0 6.627 5.373 12 12 12M12 24.5c0-6.627 5.373-12 12-12h-64" stroke="#1F8B48" stroke-width="2" />
+  <defs>
+    <rect x="24" y=".5" width="24" height="24" rx="12" transform="rotate(90 24 .5)" fill="#fff" />
+  </defs>
+</svg>

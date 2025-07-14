@@ -1,0 +1,36 @@
+.swiper-button-next,
+.swiper-button-prev {
+  all: unset;
+  width: 48px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-image: url("../../../image/arrowBlack.svg");
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: none !important;
+  display: none;
+}
+
+.swiper-button-prev:hover {
+  background-image: url("../../../image/arrow.svg");
+  transform: scaleX(-1);
+}
+
+.swiper-button-next {
+  transform: scaleX(-1);
+}
+
+.swiper-button-next:hover {
+  background-image: url("../../../image/arrow.svg");
+  transform: none;
+}

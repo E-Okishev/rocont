@@ -1,0 +1,36 @@
+@import "../../variables.scss";
+
+.slider {
+  display: flex;
+  gap: $very-large;
+
+  &__description {
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__button {
+    display: flex;
+  }
+
+  @media (width <= $isTablet) {
+    & {
+      display: block;
+    }
+    &__buttons {
+      display: none;
+    }
+
+    &__description {
+      width: fit-content;
+      margin-bottom: $large;
+    }
+  }
+}

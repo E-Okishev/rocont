@@ -1,0 +1,50 @@
+.checkbox {
+  max-width: fit-content;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "check label label"
+    "error-text error-text error-text";
+    &__input {
+    margin: 0;
+    appearance: none;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background-image: url("../../../image/checkboxRing.svg");
+    background-repeat: no-repeat;
+    grid-area: check;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      background-image: url("../../../image/checked.svg");
+      background-repeat: no-repeat;
+    }
+
+    &:checked {
+      background-image: none;
+
+      &::after {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__label {
+    padding-left: $small;
+    user-select: none;
+    grid-area: label;
+  }
+
+  &__text {
+    color: $font-color-accent;
+    opacity: 1;
+  }
+}

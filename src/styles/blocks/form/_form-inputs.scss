@@ -1,0 +1,26 @@
+.form__inputs {
+  display: grid;
+  gap: $small;
+}
+
+.form__input {
+  padding: 8px 16px 8px 24px;
+  background: $font-color-accent;
+  border-radius: 40px;
+  border: none;
+  font-family: tilda, serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: $font-color;
+  width: 100%;
+
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+}

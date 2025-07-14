@@ -1,0 +1,123 @@
+@import "./variables.scss";
+
+h1 {
+  font-size: $imposible;
+  line-height: 87%;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 95%;
+}
+
+h4 {
+  font-size: $large;
+  line-height: 110%;
+}
+
+.lead-font {
+  font-family: "tilda";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 140%;
+  letter-spacing: -0.03em;
+}
+
+.body-font {
+  font-family: "tilda";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+
+.note-font {
+  font-family: "tilda";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  opacity: 0.5;
+}
+
+.button-font {
+  font-family: "Gropled";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 110%;
+}
+
+button {
+  background: $accent-color;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($accent-color, 5%);
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: $medium;
+  padding-inline-start: $large;
+  gap: $medium;
+
+  @media (width <= $isMobile) {
+    & {
+      width: 100%;
+      justify-content: space-between;
+      padding-inline-start: $medium;
+      gap: $small;
+    }
+  }
+}
+
+@media (width <= $isTabletHorizont) {
+  h1 {
+    font-size: $very-large;
+    line-height: 100%;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 100%;
+  }
+
+  .lead-font {
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  .button-font {
+    font-size: 16px;
+  }
+}
+
+@media (width <= $isTablet) {
+}
+
+@media (width <= $isMobileHorizont) {
+  h4 {
+    font-size: 20px;
+    line-height: 100%;
+  }
+}
+
+@media (width <= $isMobile) {
+  h4 {
+    font-size: 20px;
+    line-height: 100%;
+  }
+  .note-font {
+    text-align: center;
+  }
+}

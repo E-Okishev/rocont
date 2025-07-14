@@ -1,0 +1,54 @@
+@import "../../variables.scss";
+
+.swiper-slide {
+  .slide-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $gradient;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 32px;
+    pointer-events: none;
+  }
+
+  .slide-content,
+  .slide-overlay {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    .slide__title {
+      color: $font-color-accent;
+    }
+
+    .slide__text {
+      color: $font-color-accent;
+    }
+  }
+
+  &:hover {
+    .slide-overlay,
+    .slide-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (width <= $isTablet) {
+    .slide-overlay {
+      padding: 24px;
+    }
+  }
+
+  @media (width <= $isMobileHorizont) {
+    .slide-overlay,
+    .slide-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

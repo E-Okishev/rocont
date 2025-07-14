@@ -1,0 +1,21 @@
+.form__button {
+  background-color: $font-color-accent;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 40px;
+
+  &:hover,
+  &:focus {
+    background-color: darken($font-color-accent, 20%);
+  }
+
+  &-text {
+    color: $font-color;
+  }
+
+  &-icon {
+    width: 48px;
+  }
+}

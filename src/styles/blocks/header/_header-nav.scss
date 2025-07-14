@@ -1,0 +1,13 @@
+.header {
+  &__nav {
+    margin-inline-end: calc(36px - $large);
+    display: flex;
+    gap: $very-large;
+  }
+
+  @media (width <= $isTablet) {
+    &__nav {
+      margin-inline-end: 0;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.header {
+  @media (width <= $isTablet) {
+    &__popup {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      background-color: $bg-white;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: left 0.3s ease-in-out;
+    }
+
+    &__popup.open {
+      left: 0;
+    }
+
+    &__popup .header__menu {
+      flex-direction: column;
+      align-items: center;
+      gap: $medium;
+    }
+
+    &__popup .header__menu-item {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__popup .header__menu-link {
+      padding: 15px 0;
+      display: block;
+      color: $font-color;
+    }
+
+    &__popup .header__menu-link:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    body.noscroll {
+      overflow: hidden;
+    }
+  }
+}

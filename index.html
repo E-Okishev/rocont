@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rocont</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./src/style.scss" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=99edea46-7b1d-4df7-9b6b-83e76a6c1e6b&lang=ru_RU"></script>
+  </head>
+  <body class="page">
+    <header class="header" role="header">
+      <div class="header__block">
+        <a href="/" class="header__logo" aria-label="На главную">
+          <img
+            src="./src/image/logo.svg"
+            alt="Логотип"
+            class="header__logo-image"
+          />
+        </a>
+
+        <nav class="header__nav" aria-label="Основное меню">
+          <button
+            class="header__burger"
+            id="hamb"
+            type="button"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="main-menu"
+          >
+            <span class="header__burger-item"></span>
+            <span class="header__burger-item"></span>
+            <span class="header__burger-item"></span>
+          </button>
+
+          <ul class="header__menu" id="menu" aria-label="Основное меню">
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">О системе</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Состав</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Вопросы</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Отзывы</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link header__menu-link--accent"
+                >Попробовать</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Для своих</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header__popup" id="popup"></div>
+    </header>
+
+    <main class="main" role="main">
+      <section class="section">
+        <div class="banner">
+          <video
+            class="banner__video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            aria-hidden="true"
+          >
+            <source src="./src/video/video.webm" type="video/mp4" />
+            Ваш браузер не поддерживает видео.
+          </video>
+
+          <div class="banner__description">
+            <h1 class="banner__title">Просто потому<br />что можем</h1>
+            <p class="lead-font banner__text">
+              Мы запустили основной цикл в 06:42. Результаты наблюдаются, но не
+              зафиксированы. Рекомендуем сохранять спокойствие до следующего
+              сигнала.
+            </p>
+            <button
+              class="button banner__button"
+              type="button"
+              aria-label="Попробовать просто так"
+            >
+              <span class="button-font banner__button-text"
+                >Попробовать просто так</span
+              >
+              <img
+                class="banner__button-icon"
+                src="./src/image/arrow.svg"
+                alt="Стрелка"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+
+          <div class="banner__footnote">
+            <p class="body-font banner__footnote-text">
+              Сертификат есть. Но это не точно.
+            </p>
+            <p class="body-font banner__footnote-text">
+              СГР №AM.01.01 .01.003.R.00 o47 4.06.24
+            </p>
+          </div>
+        </div>
+        <div class="mobile">
+          <h1 class="mobile__title">Просто потому<br />что можем</h1>
+          <p class="lead-font mobile__text">
+            Мы запустили основной цикл в 06:42. Результаты наблюдаются, но не
+            зафиксированы. Рекомендуем сохранять спокойствие до следующего
+            сигнала.
+          </p>
+          <button
+            class="button mobile__button"
+            type="button"
+            aria-label="Попробовать просто так"
+          >
+            <span class="button-font mobile__button-text"
+              >Попробовать просто так</span
+            >
+            <img
+              class="mobile__button-icon"
+              src="./src/image/arrow.svg"
+              alt="Стрелка"
+              aria-hidden="true"
+            />
+          </button>
+          <p class="note-font mobile__footnote">
+            Сертификат есть. Но это не точно. СГР №AM.01.01 .01.003.R.00 o47
+            4.06.24
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="slider">
+          <div class="slider__description">
+            <h2 class="slider__title">Это — не совсем то, что вы думаете</h2>
+            <div class="slider__buttons">
+              <div class="swiper-button-prev slider__button"></div>
+              <div class="swiper-button-next slider__button"></div>
+            </div>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./src/image/photo1.jpg"
+                  alt="Изображение в слайдере"
+                  loading="lazy"
+                />
+                <div class="slide-overlay">
+                  <div class="slide-content">
+                    <h4 class="slide__title">Немного упругости</h4>
+                    <p class="body-font slide__text">
+                      Чуть-чуть сияния, и ощущение, что вы о себе позаботились
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="./src/image/photo2.jpg"
+                  alt="Изображение в слайдере"
+                  loading="lazy"
+                />
+                <div class="slide-overlay">
+                  <div class="slide-content">
+                    <h4 class="slide__title">Немного упругости</h4>
+                    <p class="body-font slide__text">
+                      Чуть-чуть сияния, и ощущение, что вы о себе позаботились
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./src/image/photo3.jpg"
+                  alt="Изображение в слайдере"
+                  loading="lazy"
+                />
+                <div class="slide-overlay">
+                  <div class="slide-content">
+                    <h4 class="slide__title">Немного упругости</h4>
+                    <p class="body-font slide__text">
+                      Чуть-чуть сияния, и ощущение, что вы о себе позаботились
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./src/image/photo4.jpg"
+                  alt="Изображение в слайдере"
+                  loading="lazy"
+                />
+                <div class="slide-overlay">
+                  <div class="slide-content">
+                    <h4 class="slide__title">Немного упругости</h4>
+                    <p class="body-font slide__text">
+                      Чуть-чуть сияния, и ощущение, что вы о себе позаботились
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./src/image/photo5.jpg"
+                  alt="Изображение в слайдере"
+                  loading="lazy"
+                />
+                <div class="slide-overlay">
+                  <div class="slide-content">
+                    <h4 class="slide__title">Немного упругости</h4>
+                    <p class="body-font slide__text">
+                      Чуть-чуть сияния, и ощущение, что вы о себе позаботились
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="form">
+          <div class="form__description">
+            <h2 class="form__title">Если вы тоже решили «а почему бы и нет»</h2>
+            <ul class="form__list">
+              <li class="form__list-item">
+                <p class="form__text">Можно заказать много</p>
+              </li>
+              <li class="form__list-item">
+                <p class="form__text">
+                  Доступ возможен через северный интерфейс
+                </p>
+              </li>
+              <li class="form__list-item">
+                <p class="form__text">Можно просто поболтать</p>
+              </li>
+            </ul>
+          </div>
+          <form method="post" class="form__body" novalidate>
+            <div class="form__inputs">
+              <div class="form__input-wrapper">
+                <input
+                  class="form__input"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Имя"
+                  required
+                  pattern="^[a-zA-Zа-яА-ЯЁё \-]+$"
+                  data-error-message="Разрешены символы латиницы, кириллицы, знаки дефиса и пробелы."
+                  aria-describedby="name-error"
+                />
+                <p class="form__error" id="name-error"></p>
+              </div>
+
+              <div class="form__input-wrapper">
+                <input
+                  class="form__input"
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="Телефон"
+                  required
+                  aria-describedby="phone-error"
+                />
+                <p class="form__error" id="phone-error"></p>
+              </div>
+            </div>
+
+            <div class="form__footer">
+              <div class="form__checkbox checkbox">
+                <input
+                  class="checkbox__input"
+                  type="checkbox"
+                  id="checkbox"
+                  required
+                  aria-describedby="checkbox-error"
+                />
+                <label class="checkbox__label" for="checkbox">
+                  <p class="checkbox__text">
+                    Согласен(-на) на обработку чего угодно — лишь бы форма
+                    работала
+                  </p>
+                </label>
+                <p class="form__error" id="checkbox-error"></p>
+              </div>
+
+              <button class="form__button" type="submit">
+                <span class="form__button-text">Отправить</span>
+                <img
+                  class="form__button-icon"
+                  src="./src/image/greenArrow.svg"
+                />
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="contact">
+          <div class="contact__info">
+            <h2 class="contact__title">Контакты</h2>
+            <ul class="contact__list">
+              <li class="contact__list-item">
+                <p class="lead-font adress">
+                  Офис, где делают странные, но симпатичные вещи
+                </p>
+              </li>
+              <li class="contact__list-item">
+                <p class="lead-font time">Пн-Пт с 10:00 до 20:00</p>
+              </li>
+              <li class="contact__list-item group">
+                <a href="tel:88004444444" class="lead-font phone"
+                  >8 (800) 444 44 44</a
+                >
+                <a href="tel:88008888888" class="lead-font phone"
+                  >8 (800) 888 88 88</a
+                >
+              </li>
+              <li class="contact__list-item">
+                <a href="mailto:example@mail.ru" class="lead-font mail"
+                  >example@mail.ru</a
+                >
+              </li>
+            </ul>
+            <button class="button contact__button" type="button" aria-label="Попробовать просто так">
+              <span class="button-font contact__button-text">Связаться</span>
+              <img
+                class="contact__button-icon"
+                src="./src/image/arrow.svg"
+                alt="Стрелка"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+          <div class="contact__map">
+            <div id="app"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="/" class="header__logo footer__logo" aria-label="На главную">
+        <img
+          src="./src/image/logo.svg"
+          alt="Логотип"
+          class="header__logo-image"
+        />
+      </a>
+      <div class="footer__menu">
+        <div class="footer__menu-item">
+          <a href="#" class="body-font footer__link">О системе</a>
+          <a href="#" class="body-font footer__link">Состав</a>
+        </div>
+        <div class="footer__menu-item">
+          <a href="#" class="body-font footer__link">Архитектура</a>
+          <a href="#" class="body-font footer__link">Отзывы</a>
+        </div>
+        <div class="footer__menu-item">
+          <a href="#" class="body-font footer__link">Для своих</a>
+        </div>
+      </div>
+      <div class="footer__line"></div>
+      <div class="footer__menu">
+        <div class="footer__menu-item">
+          <p class="body-font">Коллаген © 2025</p>
+          <a href="#" class="body-font footer__link">
+            Политика обработки чего-то личного
+          </a>
+        </div>
+        <div class="footer__menu-item">
+          <a href="/" class="header__logo" aria-label="На главную">
+            <img
+              src="./src/image/logo.svg"
+              alt="Логотип"
+              class="header__logo-image"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

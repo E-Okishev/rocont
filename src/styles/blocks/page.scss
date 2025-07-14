@@ -1,0 +1,35 @@
+@import "../variables.scss";
+
+body, html {
+  overflow-x: visible;
+} 
+
+.page {
+  max-width: calc(1160px + $small * 2);
+  margin: 0 auto;
+  background-color: $bg-color;
+  padding-inline: $small;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 96px;
+}
+
+.section {
+  width: 100%;
+}
+
+@media (width <= $isTabletHorizont) {
+  .main {
+    gap: $imposible;
+  }
+}
+
+@media (width <= $isTablet) {
+  .page {
+    padding-inline: 10px;
+  }
+}

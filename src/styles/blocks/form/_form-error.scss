@@ -1,0 +1,17 @@
+.form {
+  &__error {
+    color: tomato;
+    font-size: 14px;
+    margin-top: 4px;
+    grid-area: error-text;
+  }
+
+  &__input--error {
+    border: 1px solid tomato;
+    color: tomato;
+  }
+}
+
+.checkbox--error .checkbox__text {
+  color: tomato;
+}

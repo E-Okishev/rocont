@@ -1,0 +1,36 @@
+@import "../../variables.scss";
+
+.swiper {
+  user-select: none;
+
+  &-slide {
+    width: 300px !important;
+    height: 450px;
+    border-radius: $large;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: $large;
+    }
+
+    @media (width <= $isTabletHorizont) {
+      & {
+        width: 250px !important;
+        height: 350px;
+      }
+    }
+    @media (width <= $isTablet) {
+      & {
+        height: 320px;
+      }
+    }
+    @media (width <= $isMobileHorizont) {
+      & {
+        height: 280px;
+      }
+    }
+  }
+}

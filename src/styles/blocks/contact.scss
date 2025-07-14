@@ -1,0 +1,131 @@
+@import "../variables.scss";
+
+#app {
+  width: 100%;
+  height: 435px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.contact {
+  display: flex;
+  gap: 8px;
+
+  &__map {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  &__button {
+    margin-top: 6px;
+    &-text {
+      color: $font-color-accent;
+    }
+
+    &-icon {
+      width: 48px;
+    }
+  }
+
+  &__info {
+    padding: $imposible;
+    background-color: $font-color-accent;
+    border-radius: $large;
+    display: flex;
+    gap: 26px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &-item {
+      &.group {
+        display: flex;
+        gap: 32px;
+      }
+      .adress,
+      .time,
+      .phone,
+      .mail {
+        display: flex;
+        align-items: center;
+        gap: $small;
+      }
+
+      .adress::before,
+      .time::before,
+      .phone::before,
+      .mail::before {
+        width: $large;
+        height: $large;
+        flex-shrink: 0;
+      }
+
+      .adress::before {
+        content: url(../../image/map.svg);
+      }
+      .time::before {
+        content: url(../../image/clock.svg);
+      }
+      .phone::before {
+        content: url(../../image/phone.svg);
+      }
+      .mail::before {
+        content: url(../../image/mail.svg);
+      }
+
+      & > a {
+        transition: color 0.3s ease-in;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+
+  @media (width <= $isTabletHorizont) {
+    #app {
+      height: 359px;
+    }
+    &__info {
+      padding: 48px;
+      gap: 20px;
+    }
+    &__list {
+      &-item {
+        &.group {
+          gap: 25px;
+        }
+      }
+    }
+  }
+
+  @media (width <= $isTablet) {
+    #app {
+      height: 250px;
+    }
+    & {
+      flex-direction: column;
+
+      &__info {
+        padding: $large;
+      }
+    }
+  }
+
+  @media (width <= $isMobileHorizont) {
+    &__list {
+      &-item {
+        &.group {
+          flex-direction: column;
+          gap: $medium;
+        }
+      }
+    }
+  }
+}

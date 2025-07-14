@@ -1,0 +1,105 @@
+.form {
+  background-color: $accent-color;
+  padding: $imposible;
+  padding-inline-end: 86px;
+  border-radius: $large;
+  display: flex;
+  justify-content: space-between;
+  gap: $large;
+
+  &__description {
+    display: grid;
+    gap: $large;
+    max-width: 450px;
+    width: 100%;
+  }
+
+  &__title,
+  &__text {
+    color: $font-color-accent;
+  }
+
+  &__list {
+    display: grid;
+    gap: $medium;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    gap: $small;
+
+    &::before {
+      content: url(../../../image/arrowList.svg);
+      width: $large;
+      height: $large;
+      flex-shrink: 0;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: $small;
+    max-width: 450px;
+    width: 100%;
+  }
+
+  &__footer {
+    display: grid;
+    justify-items: start;
+    gap: $medium;
+  }
+
+  @media (width <= $isTabletHorizont) {
+    padding: 48px;
+    padding-inline-end: 96px;
+
+    &__description {
+      max-width: 297px;
+    }
+
+    &__input {
+      max-width: 416px;
+    }
+  }
+
+  @media (width <= $isTablet) {
+    flex-direction: column;
+    padding: $large;
+
+    &__title {
+      max-width: 297px;
+    }
+
+    &__description {
+      width: 100%;
+    }
+
+    &__body {
+      max-width: 100%;
+    }
+
+    &__inputs {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__footer {
+      gap: $large;
+    }
+
+    &__input {
+      max-width: 416px;
+    }
+  }
+
+  @media (width <= $isMobile) {
+    &__inputs {
+      grid-template-columns: 1fr;
+    }
+
+    .checkbox__text {
+      text-align: start;
+    }
+  }
+}

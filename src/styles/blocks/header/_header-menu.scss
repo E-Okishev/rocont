@@ -1,0 +1,63 @@
+.header {
+  &__menu {
+    display: flex;
+    gap: $very-large;
+
+    &--mobile {
+      display: none;
+    }
+
+    &-link {
+      line-height: 110%;
+      transition: color 0.3s ease-in;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+
+      &--accent {
+        padding: $small $medium;
+        background-color: $accent-color;
+        border-radius: 40px;
+        color: $font-color-accent;
+        transition: background-color 0.3s ease-in;
+
+        &:hover,
+        &:focus {
+          background-color: lighten($accent-color, 5%);
+          color: $font-color-accent;
+        }
+      }
+    }
+  }
+
+  @media (width <= $isTabletHorizont) {
+    &__menu {
+      gap: $large;
+    }
+  }
+
+  @media (width <= $isTablet) {
+    &__menu {
+      display: none;
+    }
+
+    &__menu--mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $small;
+    }
+
+    &__menu-link--mobile {
+      color: $font-color;
+      transition: all 0.3s;
+    }
+
+    &__menu-item--mobile {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
